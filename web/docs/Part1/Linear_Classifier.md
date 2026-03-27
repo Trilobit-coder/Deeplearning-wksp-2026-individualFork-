@@ -9,7 +9,7 @@ Suppose we have 10,000 pictures, and our goal is to distinguish whether each pic
 Cats are cute creatures. We don't need Kasparov-level mental calculation skills to determine whether a picture is a cute kitty—it's as natural as eating or drinking. Undeniably, looking at cat pictures is the best way to kill time in the world. But if you were asked to judge 10,000 photos, over time, even the most pleasing cats would turn into mediocre four-legged animals in your eyes. Let's try handing this task over to a computer.
 
 <video width="100%" controls>
-  <source src="https://github.com/Trilobit-coder/Deeplearning-wksp-2026-individualFork-/blob/main/web/media/video/1080p60/LinearClassifierIntro.mp4" type="video/mp4">
+  <source src="https://github.com/Trilobit-coder/deeplearning/blob/main/web/media/video/1080p60/LinearClassifierIntro.mp4" type="video/mp4">
 </video>
 
 During this process, the computer will encounter many problems:
@@ -33,7 +33,7 @@ Deep learning requires a massive amount of training data. Each data point should
 Humans can quickly determine what category a photo belongs to because we have learned what a cat is. We try to simulate this learning process on a computer. This brings us to today's topic: deep learning.
 
 <video width="100%" controls>
-  <source src="https://github.com/Trilobit-coder/Deeplearning-wksp-2026-individualFork-/blob/main/web/media/video/1080p60/NeuralNetworkAnimation.mp4" type="video/mp4">
+  <source src="https://github.com/Trilobit-coder/deeplearning/blob/main/web/media/video/1080p60/NeuralNetworkAnimation.mp4" type="video/mp4">
 </video>
 
 Deep learning is like a water flow system, or a plumbing network. Given some input information, it will pass through a massive and complex plumbing network in the middle, which shunts and processes the information, and finally converges it into an output valve. In the image classification problem, the input information is the picture, the output information is the category of this input picture, and the plumbing network in the middle is the **model**.
