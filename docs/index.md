@@ -1,4 +1,20 @@
-# Welcome to Deep Learning Workshop 2026
+---
+hide:
+  - navigation
+  - toc
+---
+
+<div class="mdx-hero">
+  <div class="mdx-hero-content">
+    <h1>SSTIA Deep Learning Workshop 2026</h1>
+    <p>From foundational concepts like KNN to advanced PyTorch models. Step-by-step tutorials for beginners.</p>
+    <a href="Part1/Linear_Classifier/" class="md-button md-button--primary">Start Learning</a>
+  </div>
+</div>
+
+<br>
+
+## Welcome to Deep Learning Workshop 2026
 
 We will have an exciting journey about deep learning and artificial intelligence.
 
@@ -8,3 +24,5 @@ The Workshop contains two part:
 - The second part is about the engineering and programming.
 
 Have fun!
+
+---

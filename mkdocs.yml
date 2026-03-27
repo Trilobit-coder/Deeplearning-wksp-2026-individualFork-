@@ -3,10 +3,11 @@ site_description: "The tutorial about deep learning for beginners"
 site_author: "sstia-trilobit"
 site_url: "https://trilobit-coder.github.io/deeplearning/"
 
-# Theme configuration
 theme:
   name: material
   language: en
+  logo: assets/logo.png      
+  favicon: assets/favicon.ico
   features:
     - navigation.tabs
     - navigation.sections
@@ -29,7 +30,9 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-# Markdown extensions
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -43,13 +46,14 @@ markdown_extensions:
       generic: true
   - attr_list
   - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-# MathJax support
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-# Plugins
 plugins:
   - search:
       lang: en
@@ -58,7 +62,6 @@ plugins:
   - mkdocs-video:
       is_video: True
 
-# Navigation structure
 nav:
   - Home: index.md
   - Basics:
