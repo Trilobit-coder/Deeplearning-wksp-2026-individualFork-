@@ -1,0 +1,73 @@
+site_name: "Deep Learning Workshop 2026"
+site_description: "The tutorial about deep learning for beginners"
+site_author: "sstia-trilobit"
+site_url: "https://trilobit-coder.github.io/deeplearning/"
+
+# Theme configuration
+theme:
+  name: material
+  language: en  # English interface
+  features:
+    - navigation.tabs        # Top tab navigation
+    - navigation.sections    # Sidebar grouping
+    - navigation.top         # Back to top button
+    - navigation.tracking    # Automatic URL updates
+    - search.highlight       # Search result highlighting
+    - search.share           # Search sharing
+    - content.code.copy      # Code copy button
+  palette:
+    # Light theme
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark theme
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Markdown extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition  # Note boxes
+  - pymdownx.details  # Collapsible blocks
+  - pymdownx.emoji:  # Emoji support
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+    generic: true
+    
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Plugins
+plugins:
+  - search:
+      lang: en  # English search
+  - minify:
+      minify_html: true
+
+# Navigation structure (modify according to your tutorial content)
+nav:
+  - Home: index.md
+  - Basics:
+    - KNN and Linear Classifier: Part1/Linear_Classifier.md
+
