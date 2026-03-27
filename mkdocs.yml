@@ -59,4 +59,4 @@ plugins:
 nav:
   - Home: index.md
   - Basics:
-      - KNN and Linear Classifier: Part1/Linear_Classifier.md
+      - "KNN and Linear Classifier": Part1/Linear_Classifier.md
