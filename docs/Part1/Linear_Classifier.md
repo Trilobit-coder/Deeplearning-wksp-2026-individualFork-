@@ -152,7 +152,7 @@ Here, $\lambda$ is a real number used to adjust the magnitude of the impact the 
 
 This standardization method of taking out each term of $W$, squaring it, and summing them up is called L2 Regularization, and facts have proven that this method works very well. As for why doing this yields great results, interested listeners can further consult relevant literature to explore.
 
-### 2.2 Optimizing $W$
+### 2.2 Optimizing Weight Matrix
 
 Now we know we need to use a matrix to perform a linear transformation on the original image, and we also know we can use a loss function to evaluate whether a matrix can faithfully reflect the patterns in the dataset. Next, our goal is to find a $W$ with a very small loss function $L$. We are finally going to start training our model.
 
