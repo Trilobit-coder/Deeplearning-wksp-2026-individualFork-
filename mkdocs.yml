@@ -1,7 +1,7 @@
 site_name: "Deep Learning Workshop 2026"
 site_description: "The tutorial about deep learning for beginners"
 site_author: "sstia-trilobit"
-site_url: "https://trilobit-coder.github.io/sstia-deeplearning.github.io/"
+site_url: "https://trilobit-coder.github.io/deeplearning/"
 
 # Theme configuration
 theme:
