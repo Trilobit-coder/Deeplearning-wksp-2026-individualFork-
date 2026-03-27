@@ -50,6 +50,8 @@ Let's first consider a simpler problem. Imagine a 2D plane painted entirely with
 
 A very intuitive idea is to determine the color of this point based on the colors of its $k$ nearest neighbors. When $k=5$, we find that among the 5 points closest to the unknown point, there are 3 red points and 2 blue points. Therefore, we predict that this point is red. This is the k-Nearest Neighbor (kNN) algorithm.
 
+![type:video](../media/video/1080p60/KNN2DScene.mp4)
+
 #### 1.2.2 kNN
 
 Returning to the CIFAR-10 dataset. Each image in CIFAR-10 is composed of 32x32 RGB three-channel pixels, and has 10 possible labels. If we treat the brightness of each channel on each pixel of the image as the coordinate of this image's data point in a certain dimension, we can map each image to a point in a high-dimensional space. So let's adapt the above problem:
@@ -63,6 +65,8 @@ First, we need to define the distance between two points in the 3072-dimensional
 $$d(I_1, I_2) = \sqrt{\sum_{p=1}^{3072}(I_{1, p}-I_{2,p})^2}$$
 
 Second, considering that taking the mode of the $k$ nearest neighbors might result in a tie, we need a rule to break it. When a tie occurs, we can select the label of the closest point among the labels with the highest number of votes.
+
+![type:video](../media/video/1080p60/KNNImageSpace.mp4)
 
 #### 1.2.3 Hyperparameters
 
@@ -78,7 +82,7 @@ First, let's define what makes a model optimal. Given the data, a model with a h
 
 We must be aware of the issue of data contamination when tuning hyperparameters: after adjusting hyperparameters based on the results from the test data, we cannot use the model's results on this same set of test data as its definitive accuracy.
 
-1. Split the existing data into three parts: for example, use 80% of the data as training data, a small portion of 10% as validation data, and the other 10% for testing. We select the $k$ that performs best based on the accuracy on the validation set, and then use the test dataset as input to calculate the true approximate accuracy of this algorithm.
+Split the existing data into three parts: for example, use 80% of the data as training data, a small portion of 10% as validation data, and the other 10% for testing. We select the $k$ that performs best based on the accuracy on the validation set, and then use the test dataset as input to calculate the true approximate accuracy of this algorithm.
 
 #### 1.2.4 Reflection
 
@@ -103,6 +107,8 @@ Let $f(x; W)=W\cdot x$. Here, $x$ is the 3072-dimensional image vector, and $W$ 
 Think about the meaning of $W$ here. The $i$-th row vector of $W$ seems to correspond to the $i$-th label, ensuring that images of the corresponding label yield a maximum value when multiplied with it. At the same time, the size of each row of $W$ is identical to the image vector, so we can imagine each row of $W$ as a template image.
 
 But there is also a problem with doing this: one label can only correspond to one template. The CIFAR-10 dataset has many images labeled `horse`, and the horses in these images face both left and right. The resulting horse template in $W$ after training is, as shown in the figure, a blurry two-headed horse. Intuitively speaking, the linear classifier hasn't truly learned what a horse's features are; instead, it classifies by comparing the positions of large pixel blobs.
+
+![type:video](../media/video/1080p60/LinearClassifier.mp4)
 
 ### 2.1 Loss Function
 

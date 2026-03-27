@@ -25,4 +25,5 @@ The Workshop contains two part:
 
 Have fun!
 
+> © 2026 SSTIA-DeepLearning Workshop. All rights reserved. No part of this tutorial—including code, text, and animations—may be reproduced or redistributed without prior written permission.
 ---
