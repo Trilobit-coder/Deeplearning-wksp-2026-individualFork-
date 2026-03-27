@@ -176,11 +176,11 @@ Multivariate functions also have similar gradient vectors, where each dimension 
 
 #### 2.2.2 Gradient Descent
 
-We know that the loss function $L=\frac{1}{N}\sum_{i=1}^NL_i(f(x_i; W), y_i)+\lambda\cdot R(W)$ is a function of $W$, and also a multivariate function of each term in $W$. Therefore, we can calculate the gradient of $L$ with respect to $W$, $\nabla_LW$. Consequently, we can know how to change $W$ when $W=W_0$ so that the loss function $L$ descends the fastest.
+We know that the loss function $L=\frac{1}{N}\sum_{i=1}^NL_i(f(x_i; W), y_i)+\lambda\cdot R(W)$ is a function of $W$, and also a multivariate function of each term in $W$. Therefore, we can calculate the gradient of $L$ with respect to $W$, $\nabla_WL$. Consequently, we can know how to change $W$ when $W=W_0$ so that the loss function $L$ descends the fastest.
 
-Consider how to obtain $\nabla_LW$.
+Consider how to obtain $\nabla_WL$.
 
-1. We can obtain the numerical solution of $\nabla_LW$. by slightly adding an extremely small value to each term in $W$ and observing the change in $L$. However, when the matrix size of $W$ is very large, this method is highly inefficient.
+1. We can obtain the numerical solution of $\nabla_WL$. by slightly adding an extremely small value to each term in $W$ and observing the change in $L$. However, when the matrix size of $W$ is very large, this method is highly inefficient.
 2. We could also manually derive the partial derivative of $L$ with respect to each term in $W$, but we would need to re-derive the formulas every time we wanted to modify our algorithm, which is very troublesome.
 3. We can design a modular algorithm capable of automatically obtaining the analytical solution of the gradient through formulas. This is the well-known **Back Propagation** algorithm. Interested listeners can look up more information on their own.
 
@@ -191,7 +191,7 @@ $$
 &\textbf{procedure } \text{GradientDescent}(rate, cnt)\\
 &\quad\quad\text{initialize } W\\
 &\quad\quad\textbf{for } t=1 \textbf{ to } cnt:\\
-&\quad\quad\quad\quad d:=\nabla_LW\\
+&\quad\quad\quad\quad d:=\nabla_WL\\
 &\quad\quad\quad\quad W:=W-d\cdot rate\\
 &\quad\quad\textbf{end}\\
 &\textbf{return } W
