@@ -8,9 +8,7 @@ Suppose we have 10,000 pictures, and our goal is to distinguish whether each pic
 
 Cats are cute creatures. We don't need Kasparov-level mental calculation skills to determine whether a picture is a cute kitty—it's as natural as eating or drinking. Undeniably, looking at cat pictures is the best way to kill time in the world. But if you were asked to judge 10,000 photos, over time, even the most pleasing cats would turn into mediocre four-legged animals in your eyes. Let's try handing this task over to a computer.
 
-<video width="100%" controls>
-  <source src="https://github.com/Trilobit-coder/deeplearning/blob/main/media/video/1080p60/LinearClassifierIntro.mp4" type="video/mp4">
-</video>
+![type:video](../media/video/1080p60/LinearClassifierIntro.mp4)
 
 During this process, the computer will encounter many problems:
 
@@ -32,9 +30,7 @@ Deep learning requires a massive amount of training data. Each data point should
 
 Humans can quickly determine what category a photo belongs to because we have learned what a cat is. We try to simulate this learning process on a computer. This brings us to today's topic: deep learning.
 
-<video width="100%" controls>
-  <source src="https://github.com/Trilobit-coder/deeplearning/blob/main/media/video/1080p60/NeuralNetworkAnimation.mp4" type="video/mp4">
-</video>
+![type:video](../media/video/1080p60/NeuralNetworkAnimation.mp4)
 
 Deep learning is like a water flow system, or a plumbing network. Given some input information, it will pass through a massive and complex plumbing network in the middle, which shunts and processes the information, and finally converges it into an output valve. In the image classification problem, the input information is the picture, the output information is the category of this input picture, and the plumbing network in the middle is the **model**.
 
@@ -63,6 +59,7 @@ There is a $32\times32\times3=3072$-dimensional high-dimensional space painted w
 Before using the kNN algorithm, we need to solve two problems first:
 
 First, we need to define the distance between two points in the 3072-dimensional space. If $I_i$ represents the data point of the $i$-th image, and $I_{i,p}$ represents the distance of this data point in the $p$-th dimension, expanding the definition of Euclidean distance in 2D space, we get:
+
 $$d(I_1, I_2) = \sqrt{\sum_{p=1}^{3072}(I_{1, p}-I_{2,p})^2}.$$
 
 Second, considering that taking the mode of the $k$ nearest neighbors might result in a tie, we need a rule to break it. When a tie occurs, we can select the label of the closest point among the labels with the highest number of votes.
@@ -125,7 +122,7 @@ We can quickly think of a solution: directly set the dimension in $p_i$ with the
 
 #### 2.1.1 Softmax Function & Cross-Entropy Loss
 
-$$p_{i,j}=\frac{\exp s_{i,j}}{\sum_{k=1}^{M}\exp s_{i,k}}.$$
+$$p_{i,j} = \frac{\exp(s_{i,j})}{\sum_{k=1}^{M} \exp(s_{i,k})}.$$
 
 Doing this is equivalent to using a differentiable function to imitate the operation of directly taking the maximum value and setting it to 1, hence we call it the Softmax function.
 
@@ -230,8 +227,6 @@ Have you noticed that it looks very much like a biological neuron?
 -----
 
 ## References
-
-Bertolotti, Jacopo. Gradient Descent Animation. [https://twitter.com/j\_bertolotti/status/1121054414066810881](https://twitter.com/j_bertolotti/status/1121054414066810881)
 
 Johnson, Justin. UMich EECS-498.
 
