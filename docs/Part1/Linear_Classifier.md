@@ -8,7 +8,7 @@ Suppose we have 10,000 pictures, and our goal is to distinguish whether each pic
 
 Cats are cute creatures. We don't need Kasparov-level mental calculation skills to determine whether a picture is a cute kitty—it's as natural as eating or drinking. Undeniably, looking at cat pictures is the best way to kill time in the world. But if you were asked to judge 10,000 photos, over time, even the most pleasing cats would turn into mediocre four-legged animals in your eyes. Let's try handing this task over to a computer.
 
-![type:video](../media/video/1080p60/LinearClassifierIntro.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/LinearClassifierIntro.mp4)
 
 During this process, the computer will encounter many problems:
 
@@ -30,7 +30,7 @@ Deep learning requires a massive amount of training data. Each data point should
 
 Humans can quickly determine what category a photo belongs to because we have learned what a cat is. We try to simulate this learning process on a computer. This brings us to today's topic: deep learning.
 
-![type:video](../media/video/1080p60/NeuralNetworkAnimation.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/NeuralNetworkAnimation.mp4)
 
 Deep learning is like a water flow system, or a plumbing network. Given some input information, it will pass through a massive and complex plumbing network in the middle, which shunts and processes the information, and finally converges it into an output valve. In the image classification problem, the input information is the picture, the output information is the category of this input picture, and the plumbing network in the middle is the **model**.
 
@@ -50,7 +50,7 @@ Let's first consider a simpler problem. Imagine a 2D plane painted entirely with
 
 A very intuitive idea is to determine the color of this point based on the colors of its $k$ nearest neighbors. When $k=5$, we find that among the 5 points closest to the unknown point, there are 3 red points and 2 blue points. Therefore, we predict that this point is red. This is the k-Nearest Neighbor (kNN) algorithm.
 
-![type:video](../media/video/1080p60/KNN2DScene.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/KNN2DScene.mp4)
 
 #### 1.2.2 kNN
 
@@ -66,7 +66,7 @@ $$d(I_1, I_2) = \sqrt{\sum_{p=1}^{3072}(I_{1, p}-I_{2,p})^2}$$
 
 Second, considering that taking the mode of the $k$ nearest neighbors might result in a tie, we need a rule to break it. When a tie occurs, we can select the label of the closest point among the labels with the highest number of votes.
 
-![type:video](../media/video/1080p60/KNNImageSpace.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/KNNImageSpace.mp4)
 
 #### 1.2.3 Hyperparameters
 
@@ -108,7 +108,7 @@ Think about the meaning of $W$ here. The $i$-th row vector of $W$ seems to corre
 
 But there is also a problem with doing this: one label can only correspond to one template. The CIFAR-10 dataset has many images labeled `horse`, and the horses in these images face both left and right. The resulting horse template in $W$ after training is, as shown in the figure, a blurry two-headed horse. Intuitively speaking, the linear classifier hasn't truly learned what a horse's features are; instead, it classifies by comparing the positions of large pixel blobs.
 
-![type:video](../media/video/1080p60/LinearClassifier.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/LinearClassifier.mp4)
 
 ### 2.1 Loss Function
 
@@ -200,7 +200,7 @@ $$
 
 In this process, the initialization method of $W$, the learning $rate$ (step size), and the step count $cnt$ all belong to hyperparameters that need to be set in advance.
 
-![type:video](../media/video/1080p60/RosenbrockFullProcess.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/RosenbrockFullProcess.mp4)
 
 #### 2.2.3 Stochastic Gradient Descent
 
@@ -226,7 +226,7 @@ Because the width and height of $W_2$ are not rigidly restricted by the dimensio
 
 Functions like $\max(0,\cdot)$ that can introduce non-linear factors to the model are called activation functions. $\max(0, \cdot)$ is frequently used due to its fast calculation speed and its advantage of not triggering **vanishing gradients** after multiple nested layers. It is granted the name ReLU (Rectified Linear Unit).
 
-![type:video](../media/video/1080p60/ActivationFunctions.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/ActivationFunctions.mp4)
 
 ### 3.2 Perceptron
 
@@ -236,7 +236,7 @@ Up to this point, we have built the basic unit of deep learning from scratch—t
 
 Have you noticed that it looks very much like a biological neuron?
 
-![type:video](../media/video/1080p60/FNNMath.mp4)
+![type:video](../media/videos/Linear_Classifier_Animation/1080p60/FNNMath.mp4)
 
 -----
 

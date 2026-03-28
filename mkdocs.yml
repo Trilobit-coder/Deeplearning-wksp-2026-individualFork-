@@ -71,4 +71,4 @@ nav:
   - Home: index.md
   - Part1:
       - "KNN and Linear Classifier": Part1/Linear_Classifier.md
-      - "CNN": Part1/CNN.md
+      - "Convolutional Neural Networks": Part1/CNN.md
