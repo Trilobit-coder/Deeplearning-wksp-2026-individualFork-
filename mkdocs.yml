@@ -20,19 +20,21 @@ theme:
     - content.code.copy
   custom_dir: docs/overrides
   palette:
+    # Light Mode: 
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: indigo     
+      accent: deep purple 
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-7
         name: Switch to dark mode
       media: "(prefers-color-scheme: light)" 
 
+    # Dark Mode:
     - scheme: slate
       primary: indigo
-      accent: light blue
+      accent: cyan
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-4
         name: Switch to light mode
       media: "(prefers-color-scheme: dark)"
 
