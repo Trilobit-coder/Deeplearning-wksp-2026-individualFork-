@@ -298,7 +298,7 @@ model = LSTMLanguageModel().to(device)
 
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate, weight_decay=0.1)
 
-```py
+```
 
 ### 14.5 Training Loop
 
