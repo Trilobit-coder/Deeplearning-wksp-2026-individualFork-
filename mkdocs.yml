@@ -79,3 +79,4 @@ nav:
   - Part1:
       - "KNN and Linear Classifier": Part1/Linear_Classifier.md
       - "Convolutional Neural Networks": Part1/CNN.md
+      - "Recurrent Neural Network": Part1/RNN.md

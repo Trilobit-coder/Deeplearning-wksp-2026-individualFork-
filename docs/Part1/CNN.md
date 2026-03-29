@@ -1,6 +1,6 @@
 # Convolutional Neural Networks
 
-## 4. Why Perceptrons Aren't Enough
+## 4\. Why Perceptrons Aren't Enough
 
 We have learned about Linear Classifier in the previous study, but in fact, it is still usually not enough for identify cat in real world.
 
@@ -11,7 +11,7 @@ When we treat an image as a 1D list of 3072 numbers ($32 \times 32 \times 3$), w
 
 ---
 
-## 5. The Anatomy of a CNN (Seeing in 3D)
+## 5\. Convolutional Neutral Networks
 
 ### 5.1 How the Computer "Sees" the Cat
 
@@ -37,7 +37,7 @@ If you started every filter with the same weights (e.g., all 0.5), every single 
 
 ---
 
-## 6. ReLU
+## 6\. ReLU
 
 Just as we already studied, we recall that we can use nonlinear activation like **ReLU** or **Sigmoid** for dealing the output of each layer.
 
@@ -49,7 +49,7 @@ A cat's edge isn't a simple mathematical line; it's a complex transition of ligh
 
 ---
 
-## 7. Pooling
+## 7\. Pooling
 
 Once we have our feature maps (e.g., a "Whisker Heatmap"), we use **Max Pooling**.
 
@@ -60,7 +60,7 @@ Once we have our feature maps (e.g., a "Whisker Heatmap"), we use **Max Pooling*
 
 ---
 
-## 8. The Grand Architecture
+## 8\. The Grand Architecture
 
 The magic happens in the sequence:
 
@@ -74,7 +74,7 @@ The magic happens in the sequence:
 
 ---
 
-## 9. The Training Loop
+## 9\. The Training Loop
 
 1. **Forward Pass:** The image goes in; the model guesses "Dog."
 2. **The Loss:** The **Loss Function** measures the gap between the guess ("Dog") and the truth ("Cat").
@@ -83,19 +83,20 @@ The magic happens in the sequence:
 
 ---
 
-## 10. Coding with Pytorch
+## 10\. Coding with Pytorch
 
 Pytorch is a common library for deep learning, so let's use Pytorch to really make a CNN model that ~~can identify cat images.~~~ can identify hand-written numbers from 0 to 9 (MNIST)
 > (Actually, I find that identifying hand-written number can make a interactive window, which makes more fun. So, that's it)
 
 Use Google Colab to run or edit the code.
-  <!-- Google Colab link -->
-  <td align="center">
-    <a target="_blank" href="https://colab.research.google.com/github/trilobit-coder/deeplearning/blob/main/model/MNIST.ipynb">
-      <img src="https://i.ibb.co/2P3SLwK/colab.png" width="110px" height="70px" style="padding-bottom:5px;" />
-      Run in Google Colab
-    </a>
-  </td>
+
+<!-- Google Colab link -->
+<td align="center">
+  <a target="_blank" href="https://colab.research.google.com/github/trilobit-coder/deeplearning/blob/main/model/MNIST.ipynb">
+    <img src="https://i.ibb.co/2P3SLwK/colab.png" width="110px" height="70px" style="padding-bottom:5px;" />
+    Run in Google Colab
+  </a>
+</td>
 
 ### 10.1 Dependencies
 
@@ -212,4 +213,4 @@ model.eval()
 
 SSTIA. "SSTIA Deep Learning Workshop 2025." Source: <https://github.com/UMJI-SSTIA/Deeplearning-wksp-2025/blob/main/Worksheet/Worksheet_Part2.md>
 
-NeuralNine. "PyTorch Project: Handwritten Digit Recognition." *YouTube*, 22, Aug. 2023, <https://www.youtube.com/watch?v=vBlO87ZAiiw&t=7s>.
+NeuralNine. "PyTorch Project: Handwritten Digit Recognition." *YouTube*, 22, Aug. 2023, <https://www.youtube.com/watch?v=vBlO87ZAiiw>.
